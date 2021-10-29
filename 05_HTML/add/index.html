@@ -35,7 +35,7 @@ NAME="middle_name" SIZE="25" required placeholder="Отчество" maxlength="
      <fieldset>
          <legend>Дата рождения</legend>
          <INPUT TYPE="text" ID="year_of_b"
-         NAME="year_of_b" SIZE="6" required placeholder="2000" pattern="[0-9]{,4}"><label for="year_of_b">text: Год рождения 4-е цифры</label><br>
+         NAME="year_of_b" SIZE="6" required placeholder="2000" pattern="[0-9]{4}"><label for="year_of_b">text: Год рождения 4-е цифры</label><br>
          <select name="list" id="list">
             <option value="1">Январь</option>
             <option value="2">Февраль</option>
@@ -104,9 +104,9 @@ NAME="password" SIZE="20" required placeholder="Пароль" pattern="[A-Za-z]{
 <fieldset>
     <legend>Координаты</legend>
     <INPUT TYPE="email" ID="email"
-NAME="email" SIZE="30" placeholder="Введите адрес электронной почты" pattern="/[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm"><br>
+NAME="email" SIZE="30" placeholder="Введите адрес электронной почты"><br>
 <INPUT TYPE="url" ID="url"
-NAME="url" SIZE="30" placeholder="Введите адрес сайта" pattern="/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi  "><br>
+NAME="url" SIZE="30" placeholder="Введите адрес сайта" pattern="^((https?|ftp)\:\/\/)?([a-z0-9]{1})((\.[a-z0-9-])|([a-z0-9-]))*\.([a-z]{2,6})(\/?)$"><br>
 </fieldset>
 <fieldset>
     <legend>Цифры</legend>
