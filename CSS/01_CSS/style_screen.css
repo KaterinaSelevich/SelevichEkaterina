@@ -1,0 +1,25 @@
+h1 {
+    font-family: sans-serif;
+font-size: 14px;
+-webkit-print-color-adjust: exact;
+}
+p {
+    font-family: sans-serif;
+font-size: 14px;
+-webkit-print-color-adjust: exact;
+}
+ul {
+    font-family: sans-serif;
+font-size: 14px;
+-webkit-print-color-adjust: exact;
+}
+h2 {
+    font-family: sans-serif;
+font-size: 14px;
+-webkit-print-color-adjust: exact;
+}
+pre {
+    font-family: sans-serif;
+font-size: 14px;
+-webkit-print-color-adjust: exact;
+}
