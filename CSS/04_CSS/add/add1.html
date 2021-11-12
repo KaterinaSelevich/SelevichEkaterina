@@ -5,17 +5,26 @@
     <title>Document</title>
     <style>
 p a::before {content: url(arrow.png);}
+a[href="word.doc"]::after {
+    content: url(word.jfif);
+}
+a[href="pdf.pdf"]::after {
+    content: url(pdf.png);
+}
+a[href="zip.zip"]::after {
+    content: url(zip.gif);
+}
 ul {list-style: none; padding-inline-start:0;} 
 li a::before {content:url(list.jfif);}
 div {display: block; border: solid rgb(180, 178, 178) 1px; border-radius: 0% 10%; padding: 1em;}
-.tooltip span{
+#one .tooltip span{
     border-radius: 2px;
     visibility: hidden;
     position: absolute;
     right: 200;
     border-radius: 2px;	
 }
-.tooltip:hover span{
+#one .tooltip:hover span{
 visibility: visible;
 }
     </style>
@@ -28,14 +37,14 @@ visibility: visible;
             представляющих текст, с разметкой или без. Расширение РОС часто использовалось для<br>
             обозначения простых текстовых файлов без формирования, однако позже стало<br>
             использоваться для двоичных форматов с разметкой.<br> </p>
-            <a href="word.doc">Документ MS Word</a><img src="word.jfif" alt="word">
+            <a href="word.doc">Документ MS Word</a>
     </div>
     <div>
         <p>
             Portable Document Format (<a href="pdf">PDF</a>) -  межплатформенный формат электронных документов,<br>
             разработанный фирмой Adobe Systems с использованием ряда возможностей языка<br>
             Postscript.<br> </p>
-            <a href="pdf.pdf">Документ РDF</a><img src="pdf.png" alt="pdf">
+            <a href="pdf.pdf">Документ РDF</a>
     </div>
     <div>
         <p>
@@ -43,12 +52,12 @@ visibility: visible;
 обычно имеет расширение <a href="zip">zip</a> и хранит в сжатом или несжатом виде один или несколько<br>
 файлов, которое можно из него извлечь путем распаковки с помощью специальной<br>
 программы.<br></p>
-<a href="zip.zip">Архив</a><img src="zip.gif" alt="zip"> </div>
+<a href="zip.zip">Архив</a> </div>
 <h3> Это список файлов</h3>
-<ul>
-<li><a class="tooltip" href="word">Документ MS Word<span><img src="word.jfif" alt="word"></span></a></li>
-<li><a class="tooltip" href="pdf.png">Документ РDF<span><img src="pdf.png" alt="pdf"></span></a></li>
-<li><a class="tooltip" href="zip.gif">Архив<span><img src="zip.gif" alt="zip"></span></a></li> 
+<ul id="one">
+<li><a class="tooltip" href="word.doc">Документ MS Word<span></span></a></li>
+<li><a class="tooltip" href="pdf.pdf">Документ РDF<span></span></a></li>
+<li><a class="tooltip" href="zip.zip">Архив<span></span></a></li> 
 </ul>  
 </body>
 </html>
