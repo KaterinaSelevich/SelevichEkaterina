@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input {
+            margin: 3px;
+        }
+        input:focus{
+border: solid rgb(80, 80, 238);
+box-shadow: rgb(80, 80, 238);
+}
+    </style>
+</head>
+<body>
+    <h1>Проверка пароля</h1>
+    <form  method="post" action="http://fe.it-academy.by/TestForm.php"></form>
+    <fieldset>
+        <INPUT TYPE="text" 
+    NAME="password" class="password"><label for="password">*Пароль</label><br>
+    <INPUT TYPE="text"
+    NAME="password" class="cor_password"><label for="password">*Повторите пароль</label><br>
+    <div class="error"></div>
+    <INPUT TYPE="submit" value="Отправить" id="submit">
+    </fieldset>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script> 
+  
+    <script>
+        $(".cor_password").on("keyup", function() {
+	
+    var value_input1 = $(".password").val(); 
+    var value_input2 = $(this).val(); 
+
+    if(value_input1 != value_input2) {
+        input.style.background = 'red';
+        $(".error").html("Пароли не совпадают!"); 
+			$("#submit").attr("disabled", "disabled");
+        
+    } else { 
+    
+        $("#submit").removeAttr("disabled"); 
+        $(".error").html(""); 
+        
+    }
+    
+});
+  
+  </script>
+  </body>
+  </html>
