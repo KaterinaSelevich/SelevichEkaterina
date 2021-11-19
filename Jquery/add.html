@@ -8,7 +8,7 @@
             margin: 3px;
         }
         input:focus{
-border: solid rgb(80, 80, 238);
+border: solid rgb(80, 80, 238); 
 box-shadow: rgb(80, 80, 238);
 }
     </style>
@@ -37,13 +37,16 @@ box-shadow: rgb(80, 80, 238);
     var value_input2 = $(this).val(); 
 
     if(value_input1 != value_input2) {
-        $(".error").html("Пароли не совпадают!"); 
+        $(".password").css("backgroundColor", "red"); 
+        $(".cor_password").css("backgroundColor", "red");
 			$("#submit").attr("disabled", "disabled");
         
     } else { 
     
         $("#submit").removeAttr("disabled"); 
         $(".error").html(""); 
+        $(".password").css("backgroundColor", "green"); 
+        $(".cor_password").css("backgroundColor", "green");
         
     }
     
